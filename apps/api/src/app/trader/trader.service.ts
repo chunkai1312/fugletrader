@@ -1,6 +1,7 @@
 import { Injectable, InternalServerErrorException, Logger, NotFoundException } from '@nestjs/common';
 import { InjectFugleTrade, Streamer } from '@fugle/trade-nest';
 import { FugleTrade, Order, OrderPayload } from '@fugle/trade';
+import { InjectLineNotify, LineNotify } from 'nest-line-notify';
 import { PlaceOrderDto } from './dto/place-order.dto';
 import { ReplaceOrderDto } from './dto/replace-order.dto';
 import { GetTransactionsDto } from './dto/get-transactions.dto';
@@ -10,7 +11,10 @@ import { getOrderSideName, getOrderTypeName, getPriceTypeName, getTradeTypeName 
 export class TraderService {
   private readonly logger = new Logger(TraderService.name);
 
-  constructor(@InjectFugleTrade() private readonly fugle: FugleTrade) {}
+  constructor(
+    @InjectFugleTrade() private readonly fugle: FugleTrade,
+    @InjectLineNotify() private readonly lineNotify: LineNotify,
+  ) {}
 
   async getOrders() {
     return this.fugle.getOrders()
@@ -132,6 +136,10 @@ export class TraderService {
       `${stockNo}: ${price} ${priceUnit} ${orderType} ${tradeType} ${side} ${info}`,
     ]).join('\n');
 
+    if (process.env.LINE_NOTIFY_ENABLED === 'true') {
+      await this.lineNotify.send({ message })
+        .catch((err) => this.logger.error(err.message, err.stack));
+    }
     this.logger.log(message);
   }
 
@@ -152,6 +160,10 @@ export class TraderService {
       `${stockNo}: ${price} ${priceUnit} ${tradeType} ${side} ${size} ${sizeUnit} 已成交`,
     ]).join('\n');
 
+    if (process.env.LINE_NOTIFY_ENABLED === 'true') {
+      await this.lineNotify.send({ message })
+        .catch((err) => this.logger.error(err.message, err.stack));
+    }
     this.logger.log(message);
   }
 
