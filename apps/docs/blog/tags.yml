@@ -6,3 +6,11 @@ release:
   label: Release
   permalink: /release
   description: Rlease tag description
+tradingview:
+  label: TradingView
+  permalink: /tradingview
+  description: TradingView tag description
+webhook:
+  label: Webhook
+  permalink: /webhook
+  description: Webhook tag description

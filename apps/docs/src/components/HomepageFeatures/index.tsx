@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: '無縫的 API 整合',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/undraw_personal_data.svg').default,
     description: (
       <>
         輕鬆連接富果 API，實現即時股票交易和資料訪問。
@@ -20,7 +20,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '使用者友善的 CLI',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_programming.svg').default,
     description: (
       <>
         簡單的命令列介面，使交易和資料管理直觀且高效。
@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'LINE Notify 通知',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_texting.svg').default,
     description: (
       <>
         可選擇啟用 LINE Notify，即時取得下單的委託回報和成交回報。
