@@ -1,101 +1,116 @@
-# Fugletrader
+# FugleTrader
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+> FugleTrader is a command-line interface (CLI) tool designed to seamlessly interact with the Fugle API, enabling streamlined stock trading and real-time data integration.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+## Prerequisites
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/node?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+- Apply for the [Fugle API](https://developer.fugle.tw/)
+- Set up a [Docker](https://www.docker.com/) environment
+- (Optional) Apply for a [LINE Notify](https://notify-bot.line.me/) access token
+- (Optional) Apply for an [ngrok](https://ngrok.com/) authtoken
 
-## Run tasks
+## Installation
 
-To run the dev server for your app, use:
+First, to launch the FugleTrader API server, download the Docker image:
 
-```sh
-npx nx serve api
+```bash
+docker pull chunkai1312/fugletrader-api:latest
 ```
 
-To create a production bundle:
+Then, download the Docker image for the CLI used to interact with the API server:
 
-```sh
-npx nx build api
+```bash
+docker pull chunkai1312/fugletrader-api:latest
 ```
 
-To see all available targets to run for a project, run:
+Alternatively, if you have a Node.js environment, you can install the CLI via npm:
 
-```sh
-npx nx show project api
-```
-        
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/node:app demo
+```bash
+npm install -g fugletrader-cli
 ```
 
-To generate a new library, use:
+## Quick Start
 
-```sh
-npx nx g @nx/node:lib mylib
+The quickest way to get started is by using `docker-compose`:
+
+```yml
+version: "3"
+
+services:
+  api:
+    image: chunkai1312/fugletrader-api:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - FUGLE_TRADE_API_URL=${FUGLE_TRADE_API_URL}
+      - FUGLE_TRADE_API_KEY=${FUGLE_TRADE_API_KEY}
+      - FUGLE_TRADE_API_SECRET=${FUGLE_TRADE_API_SECRET}
+      - FUGLE_TRADE_AID=${FUGLE_TRADE_AID}
+      - FUGLE_TRADE_PASSWORD=${FUGLE_TRADE_PASSWORD}
+      - FUGLE_TRADE_CERT_PATH=${FUGLE_TRADE_CERT_PATH}
+      - FUGLE_TRADE_CERT_PASS=${FUGLE_TRADE_CERT_PASS}
+      - LINE_NOTIFY_ENABLED=${LINE_NOTIFY_ENABLED}
+      - LINE_NOTIFY_ACCESS_TOKEN=${LINE_NOTIFY_ACCESS_TOKEN}
+      - NGROK_ENABLED=${NGROK_ENABLED}
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    volumes:
+      - ./certs:/app/certs
+    restart: always
+
+  cli:
+    image: chunkai1312/fugletrader-cli:latest
+    stdin_open: true
+    tty: true
+    environment:
+      - FUGLETRADER_API_URL=${FUGLETRADER_API_URL}
+
+volumes:
+  certs:
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+The environment variables are defined as follows:
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- `FUGLE_TRADE_CERT_PATH`: Your trading certificate path.
+- `FUGLE_TRADE_API_URL`: The Fugle Trade API URL.
+- `FUGLE_TRADE_API_KEY`: Your Fugle Trade API key.
+- `FUGLE_TRADE_API_SECRET`: Your Fugle Trade API secret.
+- `FUGLE_TRADE_AID`: Your brokerage account ID.
+- `FUGLE_TRADE_PASSWORD`: Your brokerage account password.
+- `FUGLE_TRADE_CERT_PASS`: Your trading certificate password.
+- `LINE_NOTIFY_ENABLED`: (Optional) Enable LINE Notify notifications.
+- `LINE_NOTIFY_ACCESS_TOKEN`: (Optional) Your LINE Notify access token.
+- `NGROK_ENABLED`: (Optional) Enable ngrok tunneling.
+- `NGROK_AUTHTOKEN`: (Optional) Your ngrok auth token.
+- `FUGLETRADER_API_URL`: The FugleTrader API URL for the CLI to use.
 
-## Set up CI!
+To start the FugleTrader API server, run:
 
-### Step 1
-
-To connect to Nx Cloud, run the following command:
-
-```sh
-npx nx connect
+```bash
+docker compose up api
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+Once the FugleTrader API server is up and running, you can interact with it using the CLI:
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-### Step 2
-
-Use the following command to configure a CI workflow for your workspace:
-
-```sh
-npx nx g ci-workflow
+```bash
+docker compose run --rm cli --help
 ```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Or, if you’ve installed the CLI globally via npm:
 
-## Install Nx Console
+```bash
+fugletrader --help
+```
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+To set the `FUGLETRADER_API_URL`, you can run:
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+fugletrader config set FUGLETRADER_API_URL=<YOUR_FUGLETRADER_API_URL>
+```
 
-## Useful links
+## Changelog
 
-Learn more:
+[Changelog](./CHANGELOG.md)
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/node?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## License
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+[MIT](LICENSE)

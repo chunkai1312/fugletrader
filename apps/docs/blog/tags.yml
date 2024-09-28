@@ -1,0 +1,8 @@
+fugletrader:
+  label: FugleTrader
+  permalink: /fugletrader
+  description: FugleTrader tag description
+release:
+  label: Release
+  permalink: /release
+  description: Rlease tag description

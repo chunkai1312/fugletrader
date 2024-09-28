@@ -36,5 +36,18 @@
       },
       "exclude": ["apps/api-e2e/**/*", "apps/cli-e2e/**/*"]
     }
-  ]
+  ],
+  "release": {
+    "projects": ["cli"],
+    "version": {
+      "conventionalCommits": true
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "renderOptions": {
+          "authors": false
+        }
+      }
+    }
+  }
 }

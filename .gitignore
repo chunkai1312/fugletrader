@@ -43,3 +43,7 @@ Thumbs.db
 
 .env
 *.p12
+
+# Generated Docusaurus files
+.docusaurus/
+.cache-loader/
