@@ -1,6 +1,6 @@
 {
   "name": "fugletrader-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Command-line interface that interacts with the FugleTrader API",
   "license": "MIT",
   "repository": {
