@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>FugleTrader Blog</title>
+        <link>https://chunkai1312.github.io/fugletrader/blog</link>
+        <description>FugleTrader Blog</description>
+        <lastBuildDate>Sat, 28 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-TW</language>
+        <item>
+            <title><![CDATA[FugleTrader v0.1.0：基於 Docker 的富果交易 API 客戶端應用程式]]></title>
+            <link>https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0</link>
+            <guid>https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0</guid>
+            <pubDate>Sat, 28 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[我們很高興宣佈，FugleTrader 的首個正式版本 v0.1.0 已經正式發佈！這是一款基於 Docker 的富果交易 API 客戶端應用程式，旨在為開發者與投資者提供更簡單、高效的股票交易工具。FugleTrade 融合了強大的 API 整合與使用者友善的命令列介面，讓交易過程更為順暢。]]></description>
+            <content:encoded><![CDATA[<p>我們很高興宣佈，<strong>FugleTrader</strong> 的首個正式版本 <strong>v0.1.0</strong> 已經正式發佈！這是一款基於 Docker 的富果交易 API 客戶端應用程式，旨在為開發者與投資者提供更簡單、高效的股票交易工具。FugleTrade 融合了強大的 API 整合與使用者友善的命令列介面，讓交易過程更為順暢。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="核心特點">核心特點<a class="hash-link" aria-label="核心特點的直接連結" title="核心特點的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%A0%B8%E5%BF%83%E7%89%B9%E9%BB%9E">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-無縫的-api-整合">1. 無縫的 API 整合<a class="hash-link" aria-label="1. 無縫的 API 整合的直接連結" title="1. 無縫的 API 整合的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#1-%E7%84%A1%E7%B8%AB%E7%9A%84-api-%E6%95%B4%E5%90%88">​</a></h3>
+<p>FugleTrader 提供了與富果 API 的無縫整合，使用者可以輕鬆連接 API，實現即時股票交易和資料存取。透過這樣的整合，使用者能夠即時進行下單操作，同時獲取最新的市場數據，掌握交易先機。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-使用者友善的-cli">2. 使用者友善的 CLI<a class="hash-link" aria-label="2. 使用者友善的 CLI的直接連結" title="2. 使用者友善的 CLI的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#2-%E4%BD%BF%E7%94%A8%E8%80%85%E5%8F%8B%E5%96%84%E7%9A%84-cli">​</a></h3>
+<p>對於習慣使用命令列工具的使用者，FugleTrade 提供了一個簡單直觀的 CLI 介面。這讓交易與資料管理變得更加方便，無需繁瑣的操作，所有重要功能都能以幾個簡單的指令完成，大大提升了工作效率。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-line-notify-通知">3. LINE Notify 通知<a class="hash-link" aria-label="3. LINE Notify 通知的直接連結" title="3. LINE Notify 通知的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#3-line-notify-%E9%80%9A%E7%9F%A5">​</a></h3>
+<p>FugleTrader 也支援 <a href="https://notify-bot.line.me/" target="_blank" rel="noopener noreferrer">LINE Notify</a> 通知功能，讓使用者可以在交易過程中隨時取得即時的回報。無論是委託單狀態的更新，還是成交回報，使用者都可以透過 LINE 即時掌握交易動態，讓您不再錯過每一個關鍵時刻。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-ngrok-支援">4. ngrok 支援<a class="hash-link" aria-label="4. ngrok 支援的直接連結" title="4. ngrok 支援的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#4-ngrok-%E6%94%AF%E6%8F%B4">​</a></h3>
+<p>FugleTrader 內建 <a href="https://ngrok.com/" target="_blank" rel="noopener noreferrer">ngrok</a> 支援，這對於開發者來說尤為便利。透過 ngrok，您可以輕鬆測試 webhook 與第三方服務的整合，無需額外設置公開的伺服器。這為測試和開發過程提供了更大的靈活性和便利性。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="未來展望">未來展望<a class="hash-link" aria-label="未來展望的直接連結" title="未來展望的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%9C%AA%E4%BE%86%E5%B1%95%E6%9C%9B">​</a></h2>
+<p>FugleTrader v0.1.0 是我們的一個重要里程碑，但我們不會停下腳步。我們會持續優化此應用程式，加入更多實用功能，並進一步提升使用者體驗。如果您對 FugleTrader 有任何建議或回饋，歡迎隨時與我們聯繫！</p>
+<p>立即下載並試用 FugleTrade，體驗前所未有的交易便利性！</p>]]></content:encoded>
+            <category>FugleTrader</category>
+            <category>Release</category>
+        </item>
+    </channel>
+</rss>
