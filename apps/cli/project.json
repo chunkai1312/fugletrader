@@ -10,6 +10,12 @@
         "build"
       ],
       "command": "chmod +x dist/apps/cli/bin/fugletrader"
+    },
+    "docker-build": {
+      "dependsOn": [
+        "cli-build"
+      ],
+      "command": "docker build -f apps/cli/Dockerfile . -t chunkai1312/fugletrader-cli"
     }
   }
 }

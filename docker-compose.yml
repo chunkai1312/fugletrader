@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  api:
+    image: chunkai1312/fugletrader-api:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - FUGLE_TRADE_API_URL=${FUGLE_TRADE_API_URL}
+      - FUGLE_TRADE_API_KEY=${FUGLE_TRADE_API_KEY}
+      - FUGLE_TRADE_API_SECRET=${FUGLE_TRADE_API_SECRET}
+      - FUGLE_TRADE_AID=${FUGLE_TRADE_AID}
+      - FUGLE_TRADE_PASSWORD=${FUGLE_TRADE_PASSWORD}
+      - FUGLE_TRADE_CERT_PATH=${FUGLE_TRADE_CERT_PATH}
+      - FUGLE_TRADE_CERT_PASS=${FUGLE_TRADE_CERT_PASS}
+      - LINE_NOTIFY_ENABLED=${LINE_NOTIFY_ENABLED}
+      - LINE_NOTIFY_ACCESS_TOKEN=${LINE_NOTIFY_ACCESS_TOKEN}
+      - NGROK_ENABLED=${NGROK_ENABLED}
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    volumes:
+      - ./certs:/app/certs
+    restart: always
+
+  cli:
+    image: chunkai1312/fugletrader-cli:latest
+    stdin_open: true
+    tty: true
+    environment:
+      - FUGLETRADER_API_URL=${FUGLETRADER_API_URL}
+
+volumes:
+  certs:
