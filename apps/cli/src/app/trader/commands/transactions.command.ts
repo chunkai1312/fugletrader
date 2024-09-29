@@ -23,6 +23,16 @@ export class TransactionsCommand extends CommandRunner {
 
   async run(passedParam: string[], options: TransactionsCommandOptions): Promise<void> {
     try {
+      const { duration, startDate, endDate } = options;
+
+      if (duration && (startDate || endDate)) {
+        throw new TypeError('Cannot give \'startDate\' and \'endDate\' options when \'duration\' is specified');
+      }
+
+      if (!duration && (!startDate || !endDate)) {
+        throw new TypeError('Both \'startDate\' and \'endDate\' options should be given if \'duration\' is not specified');
+      }
+
       const data = await this.traderService.getTransactions(options);
       const table = new Table({ head: ['成交日', '交易別', '證券代號', '證券名稱', '成交均價', '股數小計', '已實現', '已實現損益率'] });
       data.forEach(row => {
@@ -47,7 +57,7 @@ export class TransactionsCommand extends CommandRunner {
 
   @Option({
     flags: '-d, --duration [duration]',
-    description: '期間',
+    description: 'Specify the time period (0d, 3d, 1m, 3m)',
   })
   parseDuration(val: string): string {
     return val;
@@ -55,7 +65,7 @@ export class TransactionsCommand extends CommandRunner {
 
   @Option({
     flags: '-start, --start-date [date]',
-    description: '開始日期',
+    description: 'Specify the start date (YYYY-MM-DD)',
   })
   parseStartDate(val: string): string {
     return val;
@@ -63,7 +73,7 @@ export class TransactionsCommand extends CommandRunner {
 
   @Option({
     flags: '-end, --end-date [date]',
-    description: '結束日期',
+    description: 'Specify the end date (YYYY-MM-DD)',
   })
   parseEndDate(val: string): string {
     return val;
@@ -71,6 +81,7 @@ export class TransactionsCommand extends CommandRunner {
 
   private parseTradeType(transaction: any) {
     const { buySell, trade } = transaction;
+    if (!['B', 'S'].includes(buySell)) return '非買賣';
     const side = { 'B': '買進', 'S': '賣出' };
     const type = { '0': '現股', '3': '融資', '4': '融券', 'A': '現沖賣' };
     return `${type[trade]}${side[buySell]}`;
