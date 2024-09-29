@@ -4,42 +4,63 @@ sidebar_position: 4
 
 # CLI 指令參考
 
-## fugletrader trade
+## fugletrader place
 
 委託下單。
 
 ```bash
-fugletrader place [options]
-fugletrader trade [options]
+fugletrader place <symbol> [options] 
+fugletrader trade <symbol> [options]
 ```
 
-| Option                   | Description |
-| ------------------------ | ------------|
-| `-s, --symbol [string]`  | 股票代號 |
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<symbol>` | 證券代號。 |
+
+#### Options
+
+| Option       | Description  |
+| ------------ | ------------ |
+| `-b, --buy`  | 下委買單。 |
+| `-s, --sell` | 下委賣單。 |
+
 
 ## fugletrader relace
 
 修改進行中的委託單。
 
 ```bash
-fugletrader replace [options] 
+fugletrader replace <order-id> [options] 
 ```
 
-| Option          | Description |
-| ----------------| ------------|
-| `-i, --id [string]` | 委託書號 |
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<order-id>` | 委託書號。 |
+
+#### Options
+
+| Option                    | Description  |
+| ------------------------- | ------------ |
+| `-p, --price [number] `   | 設定委託單的新價格。 |
+| `-q, --quantity [number]` | 設定委託單的新數量。 |
 
 ## fugletrader cancel
 
 取消進行中的委託單。
 
 ```bash
-fugletrader cancel [options] 
+fugletrader cancel <order-id>
 ```
 
-| Option              | Description |
-| --------------------| ------------|
-| `-i, --id [string]` | 委託書號 |
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<order-id>` | 委託書號。 |
 
 ## fugletrader orders
 
@@ -58,11 +79,13 @@ fugletrader transactions [options]
 fugletrader tx [options] 
 ```
 
-| Option                        | Description |
-| ----------------------------- | ------------|
-| `-d, --duration [duration]`   | 期間 |
-| `-start, --start-date [date]` | 開始日期 |
-| `-end, --end-date [date]`     | 結束日期 |
+#### Options
+
+| Option                        | Description  |
+| ----------------------------- | ------------ |
+| `-d, --duration [duration]`   | 指定時間範圍 (`0d`, `3d`, `1m`, `3m`)。 |
+| `-start, --start-date [date]` | 指定開始日期（`YYYY-MM-DD`）。 |
+| `-end, --end-date [date]`     | 指定結束日期（`YYYY-MM-DD`）。 |
 
 ## fugletrader inventories
 
@@ -94,8 +117,12 @@ fugletrader balance
 設定 Webhook。
 
 ```bash
-fugletrader webhook [options]
+fugletrader webhook [name]
 ```
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<name>` | 訊號名稱。 |
 
 ## fugletrader config
 
