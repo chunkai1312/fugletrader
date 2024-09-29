@@ -1,3 +1,13 @@
+## 0.2.0 (2024-09-29)
+
+
+### 🚀 Features
+
+- **cli:** adjust place command options and improve the interaction flow ([966890a](https://github.com/chunkai1312/fugletrader/commit/966890a))
+- **cli:** allow selection of orders eligible for replacement in the replace command ([3a055cc](https://github.com/chunkai1312/fugletrader/commit/3a055cc))
+- **cli:** allow selection of orders eligible for cancellation in the cancel command ([6572d3d](https://github.com/chunkai1312/fugletrader/commit/6572d3d))
+- **cli:** validate options for the transactions command ([92f9d83](https://github.com/chunkai1312/fugletrader/commit/92f9d83))
+
 ## 0.1.0 (2024-09-28)
 
 
