@@ -2,11 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chunkai1312.github.io/fugletrader/blog</id>
     <title>FugleTrader Blog</title>
-    <updated>2024-09-29T00:00:00.000Z</updated>
+    <updated>2024-09-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chunkai1312.github.io/fugletrader/blog"/>
     <subtitle>FugleTrader Blog</subtitle>
     <icon>https://chunkai1312.github.io/fugletrader/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[FugleTrader v0.2.0]]></title>
+        <id>https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0</id>
+        <link href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0"/>
+        <updated>2024-09-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[FugleTrader 的新版本 v0.2.0 現已發布！本次更新引入了幾項新功能和改進，旨在提升用戶體驗和操作效率。]]></summary>
+        <content type="html"><![CDATA[<p><strong>FugleTrader</strong> 的新版本 <strong>v0.2.0</strong> 現已發布！本次更新引入了幾項新功能和改進，旨在提升用戶體驗和操作效率。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="新增功能">新增功能<a class="hash-link" aria-label="新增功能的直接連結" title="新增功能的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="下單指令選項調整">下單指令選項調整<a class="hash-link" aria-label="下單指令選項調整的直接連結" title="下單指令選項調整的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E4%B8%8B%E5%96%AE%E6%8C%87%E4%BB%A4%E9%81%B8%E9%A0%85%E8%AA%BF%E6%95%B4">​</a></h3>
+<p>我們對 <code>place</code> 指令的選項進行了調整，並改善了互動流程。這些變更將使得下單過程更加直觀，使用者的操作體驗也會更為順暢。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="修改委託功能增強">修改委託功能增強<a class="hash-link" aria-label="修改委託功能增強的直接連結" title="修改委託功能增強的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E4%BF%AE%E6%94%B9%E5%A7%94%E8%A8%97%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%B7">​</a></h3>
+<p>在 <code>replace</code> 指令中，我們加入了能夠選擇符合條件的委託進行修改的功能，讓用戶可以更有效率地進行委託管理。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="取消委託功能增強">取消委託功能增強<a class="hash-link" aria-label="取消委託功能增強的直接連結" title="取消委託功能增強的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E5%8F%96%E6%B6%88%E5%A7%94%E8%A8%97%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%B7">​</a></h3>
+<p>我們已經更新了 <code>cancel</code> 指令，現在用戶可以方便地選擇符合條件的委託進行取消，讓管理和取消委託的過程變得更加簡便。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="交易明細選項驗證">交易明細選項驗證<a class="hash-link" aria-label="交易明細選項驗證的直接連結" title="交易明細選項驗證的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E4%BA%A4%E6%98%93%E6%98%8E%E7%B4%B0%E9%81%B8%E9%A0%85%E9%A9%97%E8%AD%89">​</a></h3>
+<p>在 CLI 中，我們對 <code>transactions</code> 指令進行了改進，現在用戶在執行此指令時，可以得到選項的驗證。這將幫助用戶更輕鬆地識別可用的參數，減少操作錯誤。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="結語">結語<a class="hash-link" aria-label="結語的直接連結" title="結語的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/30/fugletrader-v0-2-0#%E7%B5%90%E8%AA%9E">​</a></h2>
+<p>我們將持續努力，不斷優化產品功能，提升用戶體驗。如果您對新版本有任何建議或意見，歡迎隨時與我們聯繫。</p>
+<p>立即更新到 v0.2.0，體驗這些全新的功能吧！</p>]]></content>
+        <author>
+            <name>Kevin Wang</name>
+            <uri>https://github.com/chunkai1312</uri>
+        </author>
+        <category label="FugleTrader" term="FugleTrader"/>
+        <category label="Release" term="Release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何使用 TradingView 設定訊號交易？]]></title>
         <id>https://chunkai1312.github.io/fugletrader/blog/2024/09/29/how-to-set-up-signal-trading-with-tradingview</id>
@@ -16,7 +42,7 @@
         <content type="html"><![CDATA[<p><a href="https://tw.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView</a> 是一個強大的線上金融市場分析平台，提供多樣化的圖表工具、技術分析指標、交易信號及社群互動功能。透過其 <strong>快訊 (Alerts)</strong> 與 <strong>Webhooks</strong> 功能，使用者可以設立警示或執行交易策略。當這些警示或策略被觸發時，TradingView 會向 FugleTrader API 發送一則包含股票代號、交易方向、價格、數量等資訊的 Webhook 訊息，讓 FugleTrader 自動執行交易。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="什麼是-tradingview-webhook">什麼是 TradingView Webhook？<a class="hash-link" aria-label="什麼是 TradingView Webhook？的直接連結" title="什麼是 TradingView Webhook？的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/29/how-to-set-up-signal-trading-with-tradingview#%E4%BB%80%E9%BA%BC%E6%98%AF-tradingview-webhook">​</a></h2>
 <p>Webhook 是一種即時數據傳輸的方式，能讓 TradingView 將特定條件直接傳遞到 FugleTrade，觸發相應的交易訂單。透過 Webhook，TradingView 用戶可以設定快訊或執行交易策略。當這些條件被滿足時，TradingView 將發送一則包含股票代號、交易方向、價格、數量等資訊的 Webhook 訊息給 FugleTrader，從而實現自動交易。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="使用-tradingview-webhook-的先決條件">使用 TradingView Webhook 的先決條件<a class="hash-link" aria-label="使用 TradingView Webhook 的先決條件的直接連結" title="使用 TradingView Webhook 的先決條件的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/29/how-to-set-up-signal-trading-with-tradingview#%E4%BD%BF%E7%94%A8-tradingview-webhook-%E7%9A%84%E5%85%88%E6%B1%BA%E6%A2%9D%E4%BB%B6">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="使用-tradingview-webhook-的先決條件">使用 TradingView Webhook 的先決條件<a class="hash-link" aria-label="使用 TradingView Webhook 的先決條件��的直接連結" title="使用 TradingView Webhook 的先決條件的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/29/how-to-set-up-signal-trading-with-tradingview#%E4%BD%BF%E7%94%A8-tradingview-webhook-%E7%9A%84%E5%85%88%E6%B1%BA%E6%A2%9D%E4%BB%B6">​</a></h2>
 <p>在開始使用 Webhook 功能之前，您需要確保滿足以下條件：</p>
 <ul>
 <li>您必須擁有 TradingView <strong>Essential</strong>、<strong>Plus</strong>、<strong>Premium</strong>、<strong>Expert</strong> 或 <strong>Ultimate</strong> 帳戶，因為只有這些帳戶等級支援 Webhook 功能。</li>
@@ -65,13 +91,13 @@
         <summary type="html"><![CDATA[我們很高興宣佈，FugleTrader 的首個正式版本 v0.1.0 已經正式發佈！這是一款基於 Docker 的富果交易 API 客戶端應用程式，旨在為開發者與投資者提供更簡單、高效的股票交易工具。FugleTrade 融合了強大的 API 整合與使用者友善的命令列介面，讓交易過程更為順暢。]]></summary>
         <content type="html"><![CDATA[<p>我們很高興宣佈，<strong>FugleTrader</strong> 的首個正式版本 <strong>v0.1.0</strong> 已經正式發佈！這是一款基於 Docker 的富果交易 API 客戶端應用程式，旨在為開發者與投資者提供更簡單、高效的股票交易工具。FugleTrade 融合了強大的 API 整合與使用者友善的命令列介面，讓交易過程更為順暢。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="核心特點">核心特點<a class="hash-link" aria-label="核心特點的直接連結" title="核心特點的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%A0%B8%E5%BF%83%E7%89%B9%E9%BB%9E">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-無縫的-api-整合">1. 無縫的 API 整合<a class="hash-link" aria-label="1. 無縫的 API 整合的直接連結" title="1. 無縫的 API 整合的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#1-%E7%84%A1%E7%B8%AB%E7%9A%84-api-%E6%95%B4%E5%90%88">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="無縫的-api-整合">無縫的 API 整合<a class="hash-link" aria-label="無縫的 API 整合的直接連結" title="無縫的 API 整合的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E7%84%A1%E7%B8%AB%E7%9A%84-api-%E6%95%B4%E5%90%88">​</a></h3>
 <p>FugleTrader 提供了與富果 API 的無縫整合，使用者可以輕鬆連接 API，實現即時股票交易和資料存取。透過這樣的整合，使用者能夠即時進行下單操作，同時獲取最新的市場數據，掌握交易先機。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-使用者友善的-cli">2. 使用者友善的 CLI<a class="hash-link" aria-label="2. 使用者友善的 CLI的直接連結" title="2. 使用者友善的 CLI的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#2-%E4%BD%BF%E7%94%A8%E8%80%85%E5%8F%8B%E5%96%84%E7%9A%84-cli">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="使用者友善的-cli">使用者友善的 CLI<a class="hash-link" aria-label="使用者友善的 CLI的直接連結" title="使用者友善的 CLI的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E4%BD%BF%E7%94%A8%E8%80%85%E5%8F%8B%E5%96%84%E7%9A%84-cli">​</a></h3>
 <p>對於習慣使用命令列工具的使用者，FugleTrade 提供了一個簡單直觀的 CLI 介面。這讓交易與資料管理變得更加方便，無需繁瑣的操作，所有重要功能都能以幾個簡單的指令完成，大大提升了工作效率。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-line-notify-通知">3. LINE Notify 通知<a class="hash-link" aria-label="3. LINE Notify 通知的直接連結" title="3. LINE Notify 通知的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#3-line-notify-%E9%80%9A%E7%9F%A5">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="line-notify-通知">LINE Notify 通知<a class="hash-link" aria-label="LINE Notify 通知的直接連結" title="LINE Notify 通知的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#line-notify-%E9%80%9A%E7%9F%A5">​</a></h3>
 <p>FugleTrader 也支援 <a href="https://notify-bot.line.me/" target="_blank" rel="noopener noreferrer">LINE Notify</a> 通知功能，讓使用者可以在交易過程中隨時取得即時的回報。無論是委託單狀態的更新，還是成交回報，使用者都可以透過 LINE 即時掌握交易動態，讓您不再錯過每一個關鍵時刻。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-ngrok-支援">4. ngrok 支援<a class="hash-link" aria-label="4. ngrok 支援的直接連結" title="4. ngrok 支援的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#4-ngrok-%E6%94%AF%E6%8F%B4">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ngrok-支援">ngrok 支援<a class="hash-link" aria-label="ngrok 支援的直接連結" title="ngrok 支援的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#ngrok-%E6%94%AF%E6%8F%B4">​</a></h3>
 <p>FugleTrader 內建 <a href="https://ngrok.com/" target="_blank" rel="noopener noreferrer">ngrok</a> 支援，這對於開發者來說尤為便利。透過 ngrok，您可以輕鬆測試 webhook 與第三方服務的整合，無需額外設置公開的伺服器。這為測試和開發過程提供了更大的靈活性和便利性。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="未來展望">未來展望<a class="hash-link" aria-label="未來展望的直接連結" title="未來展望的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%9C%AA%E4%BE%86%E5%B1%95%E6%9C%9B">​</a></h2>
 <p>FugleTrader v0.1.0 是我們的一個重要里程碑，但我們不會停下腳步。我們會持續優化此應用程式，加入更多實用功能，並進一步提升使用者體驗。如果您對 FugleTrader 有任何建議或回饋，歡迎隨時與我們聯繫！</p>
