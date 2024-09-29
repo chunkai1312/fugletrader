@@ -2,13 +2,11 @@ import { Command, CommandRunner, InquirerService, Option } from 'nest-commander'
 import { green, red } from 'chalk';
 import { TraderService } from '../trader.service';
 
-interface CancelOrderCommandOptions {
-  id: string;
-  confirm: number;
-}
+type CancelOrderOptions = { id: string, confirm: boolean };
 
 @Command({
   name: 'cancel',
+  arguments: '[order-id]',
   description: 'cancel a working order',
 })
 export class CancelCommand extends CommandRunner {
@@ -19,26 +17,22 @@ export class CancelCommand extends CommandRunner {
     super();
   }
 
-  async run(passedParam: string[], options?: CancelOrderCommandOptions): Promise<void> {
-    const answers = await this.inquirer.prompt('cancel-order', options);
-    const { confirm, id } = answers;
-    if (confirm) {
-      try {
+  async run(passedParam: string[]): Promise<void> {
+    try {
+      const answers = await this.inquirer.prompt('cancel-order', {
+        id: passedParam[0],
+      }) as CancelOrderOptions;
+
+      const { confirm, id } = answers;
+
+      if (confirm) {
         await this.traderService.cancelOrder(id);
         console.log(`${green('✔')} 已刪單`);
-      } catch (err) {
-        console.error(`${red('✖')} ${err.message}`);
-      } finally {
-        console.log();
       }
+    } catch (err) {
+      console.error(`${red('✖')} ${err.message}`);
+    } finally {
+      console.log();
     }
-  }
-
-  @Option({
-    flags: '-i, --id [string]',
-    description: '委託書號',
-  })
-  parseId(val: string): string {
-    return val;
   }
 }
