@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { FugleTradeModule } from '@fugle/trade-nest';
+import { FugleMarketDataModule } from '@fugle/marketdata-nest';
 import { LineNotifyModule } from 'nest-line-notify';
 import { TraderModule } from './trader/trader.module';
+import { MarketDataModule } from './marketdata/marketdata.module';
 
 @Module({
   imports: [
@@ -18,10 +20,14 @@ import { TraderModule } from './trader/trader.module';
         certPass: process.env.FUGLE_TRADE_CERT_PASS,
       },
     }),
+    FugleMarketDataModule.forRoot({
+      apiKey: process.env.FUGLE_MARKETDATA_API_KEY,
+    }),
     LineNotifyModule.forRoot({
       accessToken: process.env.LINE_NOTIFY_ACCESS_TOKEN,
     }),
     TraderModule,
+    MarketDataModule,
   ],
 })
 export class AppModule {}
