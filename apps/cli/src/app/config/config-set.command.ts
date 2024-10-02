@@ -6,7 +6,7 @@ import { FUGLETRADER_API_URL } from './config.constants';
 
 @SubCommand({
   name: 'set',
-  arguments: '[key=value]',
+  arguments: '<key=value>',
 })
 export class ConfigSetCommand extends CommandRunner {
   constructor(@InjectConfigstore() private readonly configstore: Configstore) {

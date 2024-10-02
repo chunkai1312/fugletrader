@@ -1,6 +1,7 @@
 import { Command, CommandRunner, InquirerService, Option } from 'nest-commander';
 import { InjectConfigstore, Configstore } from 'nest-configstore';
 import { FUGLETRADER_API_URL } from '../config/config.constants';
+import { red, whiteBright, yellowBright } from 'chalk';
 
 interface WebhookCommandOptions {
   name: string;
@@ -31,16 +32,20 @@ export class WebhookCommand extends CommandRunner {
   async run(passedParam: string[], options?: WebhookCommandOptions): Promise<void> {
     const answers = await this.inquirer.prompt('webhook', { name: passedParam[0], ...options });
     const { name, confirm, ...order } = answers;
+
     if (confirm) {
-      const json = JSON.stringify(order, null, 2);
+      const webhookUrl = `${this.configstore.get(FUGLETRADER_API_URL)}/api/trader/orders`;
+      const message = JSON.stringify(order);
+
       console.log();
-      console.log(`Webhook URL:`);
-      console.log(`${this.configstore.get(FUGLETRADER_API_URL)}/api/trader/orders`);
+      console.log(`Copy and paste the ${yellowBright('Webhook URL')} below to your TradingView Alert settings:`);
+      console.log(`\n  ${whiteBright(webhookUrl)}`);
       console.log();
-      console.log('將以下 webhook URL 複製並貼上至您的 TradingView 策略快訊設置中:');
-      console.log(`${json}\n`);
-      console.log('請勿與他人分享您的 webhook 訊息，因為它包含您的私人資訊，可能會導致接收錯誤或詐騙訊號。');
-      console.log('此外，複製時請勿更改訊息模板。');
+      console.log(`Copy and paste the ${yellowBright('Message')} below to your TradingView Alert settings:`);
+      console.log(`\n  ${whiteBright(message)}`);
+      console.log();
+      console.log(`${red(`Please do not share your webhook URL with others, as you may be vulnerable to receiving false or scam messages.`)}`);
+      console.log(`${red(`All received TradingView alerts are sent based on the user's alert preferences and are not related to FugleTrader.`)}`);
       console.log();
     }
   }

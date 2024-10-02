@@ -5,7 +5,7 @@ import { FUGLETRADER_API_URL } from './config.constants';
 
 @SubCommand({
   name: 'get',
-  arguments: '[key]',
+  arguments: '<key>',
 })
 export class ConfigGetCommand extends CommandRunner {
   constructor(@InjectConfigstore() private readonly configstore: Configstore) {

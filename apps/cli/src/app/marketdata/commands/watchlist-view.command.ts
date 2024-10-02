@@ -1,24 +1,41 @@
 import Table from 'cli-table3';
 import numeral from 'numeral';
-import { Command, CommandRunner } from 'nest-commander';
+import { CommandRunner, InquirerService, SubCommand } from 'nest-commander';
+import { Configstore, InjectConfigstore } from 'nest-configstore';
 import { red } from 'chalk';
 import { MarketDataService } from '../marketdata.service';
 
-@Command({
-  name: 'quote',
-  aliases: ['q'],
-  arguments: '<symbol...>',
-  description: 'display latest stock quotes',
+type SelectWatchlistOptions = { listName: string; }
+
+@SubCommand({
+  name: 'view',
+  arguments: '[list-name]',
+  description: 'view a specific watchlist',
 })
-export class QuoteCommand extends CommandRunner {
-  constructor(private readonly marketDataService: MarketDataService) {
+export class WatchlistViewCommand extends CommandRunner {
+  constructor(
+    @InjectConfigstore() private readonly configstore: Configstore,
+    private readonly inquirer: InquirerService,
+    private readonly marketDataService: MarketDataService,
+  ) {
     super();
   }
 
   async run(passedParam: string[]): Promise<void> {
     try {
+      const answers = await this.inquirer.prompt('select-watchlist', {
+        listName: passedParam[0],
+      }) as SelectWatchlistOptions;
+
+      const { listName } = answers;
+
+      const watchlists = this.configstore.get('watchlists') ?? {};
+      if (!watchlists[listName]) {
+        throw new Error(`觀察清單 '${listName}' 不存在`);
+      }
+
       const data = await Promise.all(
-        passedParam.map(symbol => this.marketDataService.getQuote(symbol))
+        watchlists[listName].map(symbol => this.marketDataService.getQuote(symbol))
       );
       const table = new Table({ head: ['代號', '股票', '買進', '賣出', '成交', '漲跌', '漲幅', '單量', '委買', '委賣', '總量', '開盤', '最高', '最低', '昨收'] });
       data.forEach(row => {
