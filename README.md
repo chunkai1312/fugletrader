@@ -77,6 +77,7 @@ The environment variables are defined as follows:
 - `FUGLE_TRADE_AID`: Your brokerage account ID.
 - `FUGLE_TRADE_PASSWORD`: Your brokerage account password.
 - `FUGLE_TRADE_CERT_PASS`: Your trading certificate password.
+- `FUGLE_MARKETDATA_API_KEY`: Your Fugle MarketData API secret.
 - `LINE_NOTIFY_ENABLED`: (Optional) Enable LINE Notify notifications.
 - `LINE_NOTIFY_ACCESS_TOKEN`: (Optional) Your LINE Notify access token.
 - `NGROK_ENABLED`: (Optional) Enable ngrok tunneling.

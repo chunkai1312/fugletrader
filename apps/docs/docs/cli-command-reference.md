@@ -4,6 +4,126 @@ sidebar_position: 4
 
 # CLI 指令參考
 
+## fugletrader quote
+
+顯示最新股價。
+
+```bash
+fugletrader quote <symbol...>
+fugletrader q <symbol...>
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<symbol...>` | 股票代號。 |
+
+## fugletrader watchlist
+
+管理觀察清單。
+
+```bash
+fugletrader watchlist
+fugletrader w
+```
+
+### list
+
+列出所有觀察清單。
+
+```bash
+fugletrader watchlist list
+fugletrader w list
+```
+
+### new
+
+建立新的觀察清單。
+
+```bash
+fugletrader watchlist new <list-name>
+fugletrader w new <list-name>
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<list-name>` | 觀察清單名稱。 |
+
+### view
+
+查看觀察清單。
+
+```bash
+fugletrader watchlist view <list-name>
+fugletrader w view <list-name>
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<list-name>` | 觀察清單名稱。 |
+
+### add
+
+將指定的股票代號加入至觀察清單。
+
+```bash
+fugletrader watchlist add <list-name> [options]
+fugletrader w add <list-name> [options]
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<list-name>` | 觀察清單名稱。 |
+
+#### Options
+
+| Option       | Description  |
+| ------------ | ------------ |
+| `-s, --symbol [code]` | 股票代號（使用逗號 `,` 分隔多個股票代號）。 |
+
+### remove
+
+從觀察清單中移除指定的股票代號。
+
+```bash
+fugletrader watchlist remove <list-name> [options]
+fugletrader w remove <list-name> [options]
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<list-name>` | 觀察清單名稱。 |
+
+#### Options
+
+| Option       | Description  |
+| ------------ | ------------ |
+| `-s, --symbol [code]` | 股票代號（使用逗號 `,` 分隔多個股票代號）。 |
+
+### delete
+
+刪除觀察清單。
+
+```bash
+fugletrader watchlist delete <list-name>
+fugletrader w delete <list-name>
+```
+
+#### Arguments
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<list-name>` | 觀察清單名稱。 |
+
 ## fugletrader place
 
 委託下單。
@@ -17,7 +137,7 @@ fugletrader trade <symbol> [options]
 
 | Argument | Description  |
 | -------- | ------------ |
-| `<symbol>` | 證券代號。 |
+| `<symbol>` | 股票代號。 |
 
 #### Options
 
@@ -132,10 +252,34 @@ fugletrader webhook [name]
 fugletrader config
 ```
 
+### get
+
+取得指定變數的值。
+
+```bash
+fugletrader config get <key>
+```
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<key>` | 取得指定變數的值。 |
+
+### set
+
+設定指定變數的值。
+
+```bash
+fugletrader config set <key=value>
+```
+
+| Argument | Description  |
+| -------- | ------------ |
+| `<key=value>` | 設定指定變數的值。 |
+
 ## fugletrader help
 
 顯示幫助資訊。
 
 ```bash
-fugletrader config
+fugletrader help
 ```

@@ -22,6 +22,7 @@ services:
       - FUGLE_TRADE_AID=${FUGLE_TRADE_AID}
       - FUGLE_TRADE_PASSWORD=${FUGLE_TRADE_PASSWORD}
       - FUGLE_TRADE_CERT_PASS=${FUGLE_TRADE_CERT_PASS}
+      - FUGLE_MARKETDATA_API_KEY=${FUGLE_MARKETDATA_API_KEY}
       - LINE_NOTIFY_ENABLED=${LINE_NOTIFY_ENABLED}
       - LINE_NOTIFY_ACCESS_TOKEN=${LINE_NOTIFY_ACCESS_TOKEN}
       - NGROK_ENABLED=${NGROK_ENABLED}
@@ -50,6 +51,7 @@ volumes:
 - `FUGLE_TRADE_AID`: 您的證券帳戶 ID。
 - `FUGLE_TRADE_PASSWORD`: 您的證券帳戶密碼。
 - `FUGLE_TRADE_CERT_PASS`: 您的交易憑證密碼。
+- `FUGLE_MARKETDATA_API_KEY`: 您的富果行情 API 金鑰。
 - `LINE_NOTIFY_ENABLED`: （可選）是否啟用 LINE Notify 通知。
 - `LINE_NOTIFY_ACCESS_TOKEN`: （可選）您的 LINE Notify 存取權杖。
 - `NGROK_ENABLED`: （可選）是否啟用 ngrok 通道。
@@ -92,6 +94,8 @@ fugletrader config set FUGLETRADER_API_URL=<YOUR_FUGLETRADER_API_URL>
 
 | Command        | Alias       | Description  |
 | -------------- | ----------- | ------------ |
+| `quote`        | `q`         | 顯示最新股價。 |
+| `watchlist`    | `w`         | 管理觀察清單。 |
 | `place`        | `trade`     | 委託下單。 |
 | `replace`      |             | 修改進行中的委託單。 |
 | `cancel`       |             | 取消進行中的委託單。 |
