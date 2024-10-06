@@ -1,3 +1,12 @@
+## 0.3.0 (2024-10-06)
+
+
+### 🚀 Features
+
+- **api:** integrate the @fugle/marketdata package for retrieving market data ([e13c1ce](https://github.com/chunkai1312/fugletrader/commit/e13c1ce))
+- **cli:** add quote command to retrieve and display the latest stock quotes ([5b43bc7](https://github.com/chunkai1312/fugletrader/commit/5b43bc7))
+- **cli:** add watchlist command to manage multiple stock watchlists ([78512d6](https://github.com/chunkai1312/fugletrader/commit/78512d6))
+
 ## 0.2.0 (2024-09-29)
 
 
