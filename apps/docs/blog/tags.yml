@@ -6,6 +6,14 @@ release:
   label: Release
   permalink: /release
   description: Rlease tag description
+cli:
+  label: CLI
+  permalink: /cli
+  description: CLI tag description
+watchlist:
+  label: Watchlist
+  permalink: /watchlist
+  description: Watchlist tag description
 tradingview:
   label: TradingView
   permalink: /tradingview
