@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_fugletrader_source=self.webpackChunk_fugletrader_source||[]).push([[5013],{595:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/fugletrader/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
