@@ -4,6 +4,7 @@ import { FugleTradeModule } from '@fugle/trade-nest';
 import { FugleMarketDataModule } from '@fugle/marketdata-nest';
 import { TraderModule } from './trader/trader.module';
 import { MarketDataModule } from './marketdata/marketdata.module';
+import { Notifier, NotifierModule } from './notifier';
 
 @Module({
   imports: [
@@ -26,4 +27,11 @@ import { MarketDataModule } from './marketdata/marketdata.module';
     MarketDataModule,
   ],
 })
-export class AppModule {}
+export class AppModule {
+  static register(options: { notifier: Notifier }) {
+    return {
+      module: AppModule,
+      imports: [NotifierModule.use(options.notifier)],
+    };
+  }
+}

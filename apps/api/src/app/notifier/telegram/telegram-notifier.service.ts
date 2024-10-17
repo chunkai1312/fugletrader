@@ -9,7 +9,7 @@ export class TelegramNotifierService implements NotifierService {
     @InjectBot() private readonly bot: Telegraf,
   ) {}
 
-  send(message: string) {
+  async send(message: string) {
     return this.bot.telegram.sendMessage(process.env.TELEGRAM_USER_ID, message);
   }
 }

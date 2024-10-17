@@ -9,6 +9,6 @@ export class DiscordNotifierService implements NotifierService {
   async send(message: string) {
     const user = await this.client.users.fetch(process.env.DISCORD_USER_ID);
     const dmChannel = await user.createDM();
-    return await dmChannel.send(message);
+    return dmChannel.send(message);
   }
 }

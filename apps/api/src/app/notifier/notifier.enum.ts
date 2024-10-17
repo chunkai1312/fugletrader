@@ -1,6 +1,6 @@
 export enum Notifier {
-  LineNotify,
-  Line,
-  Telegram,
-  Discord,
+  LineNotify = 'line-notify',
+  Line = 'line',
+  Telegram = 'telegram',
+  Discord = 'discord',
 }

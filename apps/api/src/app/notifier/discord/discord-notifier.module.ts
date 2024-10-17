@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { NecordModule } from 'necord';
 import { DiscordNotifierService } from './discord-notifier.service';
 import { NotifierService } from '../notifier.service';
-import { Partials } from 'discord.js';
 
 @Module({
   imports: [

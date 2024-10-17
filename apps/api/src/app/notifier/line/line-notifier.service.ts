@@ -9,7 +9,7 @@ export class LineNotifierService implements NotifierService {
     @InjectLineMessagingApiClient() private readonly line: line.messagingApi.MessagingApiClient,
   ) {}
 
-  send(message: string) {
+  async send(message: string) {
     return this.line.pushMessage({
       to: process.env.LINE_USER_ID,
       messages: [{ type: 'text', text: message }],

@@ -8,7 +8,7 @@ export class LineNotifyNotifierService implements NotifierService {
     @InjectLineNotify() private readonly lineNotify: LineNotify,
   ) {}
 
-  send(message: string) {
+  async send(message: string) {
     return this.lineNotify.send({ message });
   }
 }
