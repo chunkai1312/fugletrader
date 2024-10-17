@@ -2,11 +2,15 @@
 sidebar_position: 3
 ---
 
-# 啟用 LINE Notify (可選)
+# 設定 LINE Notify (可選)
 
 [LINE Notify](https://notify-bot.line.me/) 是由 [LINE](https://line.me/) 官方提供的服務，允許使用者透過 LINE 應用程式接收即時通知和訊息。FugleTrader 整合了 LINE Notify 服務，讓您可以即時獲取下單的委託回報和成交回報，提升交易的便利性與即時性。
 
-![LINE Notify](./img/line-notify.png)
+:::danger 注意
+
+根據 LINE Notify 的 [結束服務公告](https://notify-bot.line.me/closing-announce)，LINE Notify 將於 2025 年 4 月停止運作。為確保系統通知功能能夠持續運行，LINE 官方建議開發者改用 LINE Messaging API 取代 LINE Notify。
+
+:::
 
 ## 取得 LINE Notify 存取權杖
 

@@ -15,16 +15,23 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - FUGLE_TRADE_CERT_PATH=${FUGLE_TRADE_CERT_PATH}
       - FUGLE_TRADE_API_URL=${FUGLE_TRADE_API_URL}
       - FUGLE_TRADE_API_KEY=${FUGLE_TRADE_API_KEY}
       - FUGLE_TRADE_API_SECRET=${FUGLE_TRADE_API_SECRET}
       - FUGLE_TRADE_AID=${FUGLE_TRADE_AID}
       - FUGLE_TRADE_PASSWORD=${FUGLE_TRADE_PASSWORD}
+      - FUGLE_TRADE_CERT_PATH=${FUGLE_TRADE_CERT_PATH}
       - FUGLE_TRADE_CERT_PASS=${FUGLE_TRADE_CERT_PASS}
       - FUGLE_MARKETDATA_API_KEY=${FUGLE_MARKETDATA_API_KEY}
-      - LINE_NOTIFY_ENABLED=${LINE_NOTIFY_ENABLED}
+      - NOTIFIER_SERVICE=${NOTIFIER_SERVICE}
       - LINE_NOTIFY_ACCESS_TOKEN=${LINE_NOTIFY_ACCESS_TOKEN}
+      - LINE_CHANNEL_ACCESS_TOKEN=${LINE_CHANNEL_ACCESS_TOKEN}
+      - LINE_CHANNEL_SECRET=${LINE_CHANNEL_SECRET}
+      - LINE_USER_ID=${LINE_USER_ID}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_USER_ID=${TELEGRAM_USER_ID}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - DISCORD_USER_ID=${DISCORD_USER_ID}
       - NGROK_ENABLED=${NGROK_ENABLED}
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     volumes:
@@ -52,10 +59,17 @@ volumes:
 - `FUGLE_TRADE_PASSWORD`: 您的證券帳戶密碼。
 - `FUGLE_TRADE_CERT_PASS`: 您的交易憑證密碼。
 - `FUGLE_MARKETDATA_API_KEY`: 您的富果行情 API 金鑰。
-- `LINE_NOTIFY_ENABLED`: （可選）是否啟用 LINE Notify 通知。
-- `LINE_NOTIFY_ACCESS_TOKEN`: （可選）您的 LINE Notify 存取權杖。
-- `NGROK_ENABLED`: （可選）是否啟用 ngrok 通道。
-- `NGROK_AUTHTOKEN`: （可選）您的 ngrok Authtoken。
+- `NOTIFIER_SERVICE`: (可選) 指定啟用的主動回報通知服務，可選 `line-notify`、`line`、`telegram`、`discord`。
+- `LINE_NOTIFY_ACCESS_TOKEN`: (可選) 您的 LINE Notify 存取權杖。
+- `LINE_CHANNEL_ACCESS_TOKEN`: (可選) 您的 LINE Channel Access Token。
+- `LINE_CHANNEL_SECRET`: (可選) 您的 LINE Channel Access Secret。
+- `LINE_USER_ID`: (可選) 您的 LINE User ID。
+- `TELEGRAM_BOT_TOKEN`:(可選) 您的 Telegram Bot Token。
+- `TELEGRAM_USER_ID`: (可選) 您的 Telegram User ID。
+- `DISCORD_BOT_TOKEN`: (可選) 您的 Discord Bot Token。
+- `DISCORD_USER_ID`: (可選) 您的 Discord User ID。
+- `NGROK_ENABLED`: (可選) 是否啟用 ngrok 通道。
+- `NGROK_AUTHTOKEN`: (可選) 您的 ngrok Authtoken。
 - `FUGLETRADER_API_URL`: CLI 使用的 FugleTrader API URL。
 
 ## 啟動 FugleTrader API 伺服器

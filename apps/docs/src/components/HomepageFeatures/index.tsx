@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_personal_data.svg').default,
     description: (
       <>
-        輕鬆連接富果 API，實現即時股票交易和資料訪問。
+        輕鬆連接富果 API，實現即時股票交易與數據訪問。
       </>
     ),
   },
@@ -23,16 +23,16 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_programming.svg').default,
     description: (
       <>
-        簡單的命令列介面，使交易和資料管理直觀且高效。
+        簡單明瞭的命令列介面，使交易與數據管理直觀且高效。
       </>
     ),
   },
   {
-    title: 'LINE Notify 通知',
+    title: '主動回報通知',
     Svg: require('@site/static/img/undraw_texting.svg').default,
     description: (
       <>
-        可選擇啟用 LINE Notify，即時取得下單的委託回報和成交回報。
+        支援多種平台，包括 LINE、Discord 和 Telegram，讓您能隨時接收下單委託及成交回報通知。
       </>
     ),
   },
