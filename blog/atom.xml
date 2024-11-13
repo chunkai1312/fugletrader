@@ -2,11 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chunkai1312.github.io/fugletrader/blog</id>
     <title>FugleTrader Blog</title>
-    <updated>2024-10-10T00:00:00.000Z</updated>
+    <updated>2024-11-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chunkai1312.github.io/fugletrader/blog"/>
     <subtitle>FugleTrader Blog</subtitle>
     <icon>https://chunkai1312.github.io/fugletrader/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[FugleTrader v1.0.0]]></title>
+        <id>https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0</id>
+        <link href="https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0"/>
+        <updated>2024-11-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[我們很高興宣布 FugleTrader v1.0.0 正式發佈！在這次版本更新中，我們加入了強大的多平台通知功能，讓使用者能夠依需求選擇適合的通知服務，包括 LINE Bot、Telegram Bot 和 Discord Bot，進一步提升了 FugleTrader 的靈活性和可用性。以下是此次版本的主要更新內容。]]></summary>
+        <content type="html"><![CDATA[<p>我們很高興宣布 <strong>FugleTrader v1.0.0</strong> 正式發佈！在這次版本更新中，我們加入了強大的多平台通知功能，讓使用者能夠依需求選擇適合的通知服務，包括 LINE Bot、Telegram Bot 和 Discord Bot，進一步提升了 FugleTrader 的靈活性和可用性。以下是此次版本的主要更新內容。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="版本亮點">版本亮點<a class="hash-link" aria-label="版本亮點的直接連結" title="版本亮點的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0#%E7%89%88%E6%9C%AC%E4%BA%AE%E9%BB%9E">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="api-新增多平台通知模組">API 新增多平台通知模組<a class="hash-link" aria-label="API 新增多平台通知模組的直接連結" title="API 新增多平台通知模組的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0#api-%E6%96%B0%E5%A2%9E%E5%A4%9A%E5%B9%B3%E5%8F%B0%E9%80%9A%E7%9F%A5%E6%A8%A1%E7%B5%84">​</a></h3>
+<p>隨著 LINE Notify 宣布將於 2025 年 4 月 <a href="https://notify-bot.line.me/closing-announce" target="_blank" rel="noopener noreferrer">結束服務</a>，LINE 官方建議開發者改用 LINE Messaging API 作為替代方案。為了確保 FugleTrader 的通知功能能夠持續運行，我們在本次更新中推出了多平台通知模組，使用者可以選擇 LINE Bot、Telegram Bot 或 Discord Bot 作為新的通知平台，以便接收 FugleTrader 的主動回報通知。</p>
+<ul>
+<li>
+<p><strong>LINE Bot 支援</strong><br>
+<!-- -->為配合 LINE Notify 停止服務的政策，我們新增了 LINE Bot 支援，使用者只需在設定中啟用此功能，即可繼續透過 LINE 接收通知，隨時掌握交易狀況。</p>
+</li>
+<li>
+<p><strong>Telegram Bot 支援</strong><br>
+<!-- -->為了提供更多選擇，我們加入了 Telegram Bot 作為另一種通知方式，讓使用者透過 Telegram Bot 即時獲取交易通知。</p>
+</li>
+<li>
+<p><strong>Discord Bot 支援</strong><br>
+<!-- -->為了滿足不同平台偏好的使用者，FugleTrader 現在也支援透過 Discord Bot 發送通知，讓使用者可以在 Discord 上接收 FugleTrader 的通知。</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="可選擇性啟用通知服務">可選擇性啟用通知服務<a class="hash-link" aria-label="可選擇性啟用通知服務的直接連結" title="可選擇性啟用通知服務的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0#%E5%8F%AF%E9%81%B8%E6%93%87%E6%80%A7%E5%95%9F%E7%94%A8%E9%80%9A%E7%9F%A5%E6%9C%8D%E5%8B%99">​</a></h3>
+<p>FugleTrader 新增了更彈性的通知服務設定，允許使用者依需求選擇想要啟用的通知服務。只需完成 Bot 設定並啟用通知服務，即可按您偏好的方式接收市場資訊和交易通知。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="結語">結語<a class="hash-link" aria-label="結語的直接連結" title="結語的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/11/13/fugletrader-v1-0-0#%E7%B5%90%E8%AA%9E">​</a></h2>
+<p>隨著 LINE Notify 的服務即將結束，我們相信這次多平台通知功能的更新，能幫助您順利過渡，並繼續享受 FugleTrader 的便捷功能。感謝您對 FugleTrader 的支持，未來我們將持續優化並推出更多功能，期待您的反饋和建議！</p>]]></content>
+        <author>
+            <name>Kevin Wang</name>
+            <uri>https://github.com/chunkai1312</uri>
+        </author>
+        <category label="FugleTrader" term="FugleTrader"/>
+        <category label="Release" term="Release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用 FugleTrader CLI 指令管理自選股清單]]></title>
         <id>https://chunkai1312.github.io/fugletrader/blog/2024/10/10/using-fugletrader-cli-command-manage-watchlist</id>
@@ -42,7 +77,7 @@
 <p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/fugletrader-watchlist-add-1538bfb4fe752b58f14ac231a272351a.png" width="1364" height="514" class="img_ev3q"></p>
 <p>這將把 <strong>力積電（6770）</strong> 股票加入至 <code>晶圓代工</code> 清單中。</p>
 <p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/fugletrader-watchlist-list-2-8f133ebbf0ac7b52e157197007e3d215.png" width="1364" height="546" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="查看特定自選股清單">查看特定自選股清單<a class="hash-link" aria-label="查看特定自選股清單的直接連結" title="查看特定自選股清單的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/10/using-fugletrader-cli-command-manage-watchlist#%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%E8%87%AA%E9%81%B8%E8%82%A1%E6%B8%85%E5%96%AE">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="查看特定自選股清單">查看特定自選股清單<a class="hash-link" aria-label="查看特定自選股清單的直接連結" title="查看特定自選股清單的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/10/using-fugletrader-cli-command-manage-watchlist#%E6%9F%A5%E7%9C%8B%E7%89%B9%E5%AE%9A%EF%BF%BD%EF%BF%BD%E8%87%AA%E9%81%B8%E8%82%A1%E6%B8%85%E5%96%AE">​</a></h3>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">fugletrader watchlist view [list-name]</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>使用 <code>view</code> 指令，您可以查看特定清單中的所有股票。</p>
 <p>範例：</p>
@@ -83,7 +118,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="新增功能">新增功能<a class="hash-link" aria-label="新增功能的直接連結" title="新增功能的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/06/fugletrader-v0-3-0#%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="api-整合富果即時行情">API 整合富果即時行情<a class="hash-link" aria-label="API 整合富果即時行情的直接連結" title="API 整合富果即時行情的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/06/fugletrader-v0-3-0#api-%E6%95%B4%E5%90%88%E5%AF%8C%E6%9E%9C%E5%8D%B3%E6%99%82%E8%A1%8C%E6%83%85">​</a></h3>
 <p>在 API 中，我們整合了 <code>@fugle/marketdata</code> 套件，使 FugleTrader 能夠直接從市場數據源檢索即時市場資訊。這對於需要快速做出投資決策的朋友來說，無疑是一大助力。</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="股票報價查詢功能">股票報價查詢功能<a class="hash-link" aria-label="股票報價查詢功能的直接連結" title="股票��報價查詢功能的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/06/fugletrader-v0-3-0#%E8%82%A1%E7%A5%A8%E5%A0%B1%E5%83%B9%E6%9F%A5%E8%A9%A2%E5%8A%9F%E8%83%BD">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="股票報價查詢功能">股票報價查詢功能<a class="hash-link" aria-label="股票報價查詢功能的直接連結" title="股票報價查詢功能的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/06/fugletrader-v0-3-0#%E8%82%A1%E7%A5%A8%E5%A0%B1%E5%83%B9%E6%9F%A5%E8%A9%A2%E5%8A%9F%E8%83%BD">​</a></h3>
 <p>CLI 工具現在新增了 <code>quote</code> 指令，讓您可以即時檢索並顯示股票的最新報價，幫助您時刻掌握市場行情變化，迅速作出反應。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="股票觀察清單管理">股票觀察清單管理<a class="hash-link" aria-label="股票觀察清單管理的直接連結" title="股票觀察清單管理的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/10/06/fugletrader-v0-3-0#%E8%82%A1%E7%A5%A8%E8%A7%80%E5%AF%9F%E6%B8%85%E5%96%AE%E7%AE%A1%E7%90%86">​</a></h3>
 <p>此外，我們還在 CLI 工具中加入了 <code>watchlist</code> 指令，允許用戶管理多個股票的觀察清單，輕鬆追蹤感興趣的股票。您可以新增、刪除及查看觀察清單，讓投資決策變得更有條理。</p>
@@ -189,7 +224,7 @@
 <p>FugleTrader 也支援 <a href="https://notify-bot.line.me/" target="_blank" rel="noopener noreferrer">LINE Notify</a> 通知功能，讓使用者可以在交易過程中隨時取得即時的回報。無論是委託單狀態的更新，還是成交回報，使用者都可以透過 LINE 即時掌握交易動態，讓您不再錯過每一個關鍵時刻。</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="ngrok-支援">ngrok 支援<a class="hash-link" aria-label="ngrok 支援的直接連結" title="ngrok 支援的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#ngrok-%E6%94%AF%E6%8F%B4">​</a></h3>
 <p>FugleTrader 內建 <a href="https://ngrok.com/" target="_blank" rel="noopener noreferrer">ngrok</a> 支援，這對於開發者來說尤為便利。透過 ngrok，您可以輕鬆測試 webhook 與第三方服務的整合，無需額外設置公開的伺服器。這為測試和開發過程提供了更大的靈活性和便利性。</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="未來展望">未來展望<a class="hash-link" aria-label="未來展望的直接連結" title="未來展望的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%9C%AA%EF%BF%BD%EF%BF%BD%E4%BE%86%E5%B1%95%E6%9C%9B">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="未來展望">未來展望<a class="hash-link" aria-label="未來展望的直接連結" title="未來展望的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/28/fugletrader-v0-1-0#%E6%9C%AA%E4%BE%86%E5%B1%95%E6%9C%9B">​</a></h2>
 <p>FugleTrader v0.1.0 是我們的一個重要里程碑，但我們不會停下腳步。我們會持續優化此應用程式，加入更多實用功能，並進一步提升使用者體驗。如果您對 FugleTrader 有任何建議或回饋，歡迎隨時與我們聯繫！</p>
 <p>立即下載並試用 FugleTrade，體驗前所未有的交易便利性！</p>]]></content>
         <author>
