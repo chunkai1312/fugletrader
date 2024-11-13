@@ -1,3 +1,14 @@
+# 1.0.0 (2024-11-13)
+
+
+### 🚀 Features
+
+- **api:** implement notifier module for multi-platform support ([e233d8c](https://github.com/chunkai1312/fugletrader/commit/e233d8c))
+- **api:** add support for LINE Bot as notifier ([66399f9](https://github.com/chunkai1312/fugletrader/commit/66399f9))
+- **api:** add support for Telegram Bot as notifier ([a9a9243](https://github.com/chunkai1312/fugletrader/commit/a9a9243))
+- **api:** add support for Discord Bot as notifier ([189d278](https://github.com/chunkai1312/fugletrader/commit/189d278))
+- **api:** allow enabling notifier service with options for LINE, Telegram, or Discord ([52b4616](https://github.com/chunkai1312/fugletrader/commit/52b4616))
+
 ## 0.3.0 (2024-10-06)
 
 
