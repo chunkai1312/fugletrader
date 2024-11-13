@@ -134,7 +134,7 @@
 <p>程式會以問答形式引導您決定下單內容：</p>
 <p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/fugletrader-webhook-1-8e06d5a1ec9340699e14612ecdb11f4b.png" width="1364" height="610" class="img_ev3q"></p>
 <p>完成後，請再次確認委託內容無誤：</p>
-<p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/fugletrader-webhook-2-94b6c791f1b8f9971d0224e5679bc110.png" width="1364" height="962" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/fugletrader-webhook-2-94b6c791f1b8f9971d0224e5679bc110.png" width="1850" height="650" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="在-tradingview-設定-webhook">在 TradingView 設定 Webhook<a class="hash-link" aria-label="在 TradingView 設定 Webhook的直接連結" title="在 TradingView 設定 Webhook的直接連結" href="https://chunkai1312.github.io/fugletrader/blog/2024/09/29/how-to-set-up-signal-trading-with-tradingview#%E5%9C%A8-tradingview-%E8%A8%AD%E5%AE%9A-webhook">​</a></h3>
 <p>接下來，我們將示範如何在 <a href="https://tw.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView</a> 上設置快訊及 Webhooks。登入 TradingView 網站後，您可以在畫面右側找到快訊選單。</p>
 <p><img decoding="async" loading="lazy" src="https://chunkai1312.github.io/fugletrader/assets/images/tradingview-webhook-1-ce8ebfd4ea581c3fc97261938dafe738.png" width="3024" height="1646" class="img_ev3q"></p>
